@@ -1,0 +1,117 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(180deg, #87CEEB 0%, #E0F7FA 100%);
+    overflow: hidden;
+}
+
+#snoopy-house {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+#snoopy-house:hover {
+    transform: scale(1.05);
+}
+
+#video-container, #form-container {
+    display: none;
+    max-width: 600px;
+    width: 100vh;
+    align-content: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input, button {
+    padding: 10px;
+    font-size: 16px;
+}
+
+button {
+    background-color: #381aca;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.balloon {
+    position: absolute;
+    z-index: -2;
+    width: 100px;
+    height: 120px;
+    border-radius: 50%;
+    animation: float 5s ease-in-out infinite;
+    transition: transform 0.3s ease;
+}
+
+.balloon:hover {
+    transform: scale(1.05);
+}
+
+.ground {
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+    height: 30vh;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 200"><path d="M0,10 Q250,50 500,10 T1000,10 L1000,200 L0,200 Z" fill="%234CAF50"/></svg>') no-repeat;
+    background-size: cover;
+    z-index: -1;
+}
+
+.sun {
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    width: 100px;
+    height: 100px;
+    background: yellow;
+    border-radius: 50%;
+    box-shadow: 0 0 50px #FFD700;
+    animation: pulse 2s ease-in-out infinite;
+    z-index: -4;
+  }
+  .cloud {
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+    z-index: -3;
+    animation: float-cloud 30s linear infinite;
+  }
+  .cloud:before, .cloud:after {
+    content: '';
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+  }
+  .cloud1 { width: 100px; height: 40px; top: 15%; left: -100px; }
+  .cloud1:before { width: 50px; height: 50px; top: -25px; left: 10px; }
+  .cloud1:after { width: 70px; height: 70px; top: -35px; right: 10px; }
+  .cloud2 { width: 80px; height: 30px; top: 25%; left: -80px; animation-delay: 15s; }
+  .cloud2:before { width: 40px; height: 40px; top: -20px; left: 5px; }
+  .cloud2:after { width: 55px; height: 55px; top: -30px; right: 5px; }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+@keyframes float-cloud {
+    0% { transform: translateX(-100px); }
+    100% { transform: translateX(calc(100vw + 100px)); }
+}

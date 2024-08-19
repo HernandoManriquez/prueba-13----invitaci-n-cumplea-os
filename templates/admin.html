@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Administrador</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/admin_styles.css') }}">
+</head>
+<body>
+    <h1>Panel de Administrador</h1>
+    
+    <table id="user-data">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Aceptó Términos</th>
+                <th>Video</th>
+                <th>Fecha de Creación</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Los datos se cargarán aquí dinámicamente -->
+        </tbody>
+    </table>
+
+    <script src="{{ url_for('static', filename='js/admin_script.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenido a la Casa de Snoopy</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/visitor_styles.css') }}">
+</head>
+<body>
+    <div id="snoopy-house">
+        <img src="{{ url_for('static', filename='images/snoopy_house.png') }}" alt="Casa de Snoopy">
+    </div>
+    
+    <div id="video-container" style="display: none;">
+        <video id="intro-video" controls>
+            <source src="{{ url_for('static', filename='videos/intro_video.mp4') }}" type="video/mp4">
+            Tu navegador no soporta el elemento de video.
+        </video>
+    </div>
+    
+    <div id="form-container" style="display: none;">
+        <form id="user-form">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+            
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido" name="apellido" required>
+            
+            <label>
+                <input type="checkbox" id="agreement" name="agreement" required>
+                Confirmo mi asistencia a tu cumpleaños
+            </label>
+            
+            <label for="user-video">Agregar video (opcional):</label>
+            <input type="file" id="user-video" name="user-video" accept="video/*">
+            
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+    <div class="sun"></div>
+    <div class="cloud cloud1"></div>
+    <div class="cloud cloud2"></div>
+    <div class="ground"></div>
+
+    <script src="{{ url_for('static', filename='js/visitor_script.js') }}"></script>
+</body>
+</html>
