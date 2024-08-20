@@ -55,6 +55,8 @@ button:hover {
     border-radius: 50%;
     animation: float 5s ease-in-out infinite;
     transition: transform 0.3s ease;
+    border: 2px solid #000;
+    filter: url(#pencilTexture);
 }
 
 .balloon:hover {
@@ -81,7 +83,8 @@ button:hover {
     border-radius: 50%;
     box-shadow: 0 0 50px #FFD700;
     animation: pulse 2s ease-in-out infinite;
-    z-index: -4;
+    z-index: -5;
+    filter: drop-shadow(0 0 2px gray);
   }
   .cloud {
     position: absolute;
@@ -89,19 +92,26 @@ button:hover {
     border-radius: 50%;
     z-index: -3;
     animation: float-cloud 30s linear infinite;
+    filter: drop-shadow(0 0 0 black) drop-shadow(2px 2px 0 black) drop-shadow(-2px -2px 0 black) drop-shadow(2px -2px 0 black) drop-shadow(-2px 2px 0 black) url(#pencilTexture);
   }
   .cloud:before, .cloud:after {
     content: '';
     position: absolute;
     background: white;
     border-radius: 50%;
+    z-index: -4;
   }
+
+
   .cloud1 { width: 100px; height: 40px; top: 15%; left: -100px; }
   .cloud1:before { width: 50px; height: 50px; top: -25px; left: 10px; }
   .cloud1:after { width: 70px; height: 70px; top: -35px; right: 10px; }
-  .cloud2 { width: 80px; height: 30px; top: 25%; left: -80px; animation-delay: 15s; }
+  .cloud2 { width: 80px; height: 30px; top: 25%; left: -85px; animation-delay: 10s; }
   .cloud2:before { width: 40px; height: 40px; top: -20px; left: 5px; }
   .cloud2:after { width: 55px; height: 55px; top: -30px; right: 5px; }
+  .cloud3 { width: 110px; height: 50px; top: 50%; left: -115px; animation-delay: 18s; }
+  .cloud3:before { width: 60px; height: 45px; top: -20px; left: 10px; }
+  .cloud3:after { width: 80px; height: 50px; top: -30px; right: 5px; }
 
   @keyframes float {
     0%, 100% { transform: translateY(0); }
