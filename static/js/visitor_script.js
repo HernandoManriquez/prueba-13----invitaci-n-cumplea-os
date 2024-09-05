@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
     house.addEventListener('click', function() {
         house.style.display = 'none';
         videoContainer.style.display = 'block';
+        ground.style.display= 'none';
         introVideo.play();
     });
 

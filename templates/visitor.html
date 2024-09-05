@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/visitor_styles.css') }}">
 </head>
 <body>
+
     <svg width="0" height="0">
         <defs>
           <filter id="pencilTexture">
@@ -18,10 +19,17 @@
           </clipPath>
         </defs>
     </svg>
-    <div id="snoopy-house">
-        <img src="{{ url_for('static', filename='images/snoopy_house.png') }}" alt="Casa de Snoopy">
-    </div>
-    
+ 
+        <div id="snoopy-house">
+            <img src="{{ url_for('static', filename='images/snoopy_house.png') }}" alt="Casa de Snoopy">
+        </div>
+        <div class="sun"></div>
+        <div class="cloud cloud1"></div>
+        <div class="cloud cloud2"></div>
+        <div class="cloud cloud3"></div>
+        <div id="ground" class="ground"></div>
+
+
     <div id="video-container" style="display: none;">
         <video id="intro-video" controls>
             <source src="{{ url_for('static', filename='videos/intro_video.mp4') }}" type="video/mp4">
@@ -42,17 +50,11 @@
                 Confirmo mi asistencia a tu cumpleaños
             </label>
             
-            <label for="user-video">Agregar video (opcional):</label>
-            <input type="file" id="user-video" name="user-video" accept="video/*">
             
             <button type="submit">Enviar</button>
         </form>
     </div>
-    <div class="sun"></div>
-    <div class="cloud cloud1"></div>
-    <div class="cloud cloud2"></div>
-    <div class="cloud cloud3"></div>
-    <div class="ground"></div>
+
 
     <script src="{{ url_for('static', filename='js/visitor_script.js') }}"></script>
 </body>

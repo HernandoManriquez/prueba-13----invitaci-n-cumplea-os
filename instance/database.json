@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "nombre": "rtee6",
+        "apellido": "tyjrtyjtyj",
+        "agreement": true,
+        "fecha_creacion": "2024-09-05T02:20:48.374035"
+    },
+    {
+        "id": 2,
+        "nombre": "Andres",
+        "apellido": "Manriquez",
+        "agreement": true,
+        "fecha_creacion": "2024-09-05T02:31:47.005123"
+    },
+    {
+        "id": 3,
+        "nombre": "wrtyuret",
+        "apellido": "wretwrt",
+        "agreement": true,
+        "fecha_creacion": "2024-09-05T02:50:06.165820"
+    }
+]
